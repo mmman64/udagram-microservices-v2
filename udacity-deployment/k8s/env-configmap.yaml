@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  AWS_MEDIA_BUCKET: udagram-delgado-dev
+  AWS_PROFILE: juadel-dev
+  AWS_REGION: ca-central-1
+  JWT_SECRET: juancho8
+  POSTGRESS_DB: udagramdelgadodev
+  POSTGRESS_HOST: udagramdelgadodev.chocxswmc6av.ca-central-1.rds.amazonaws.com
+  URL: http://a3c2fbf71ef7b4ddea9137fd492c08c4-109074746.ca-central-1.elb.amazonaws.com/
+metadata:
+  name: env-config
