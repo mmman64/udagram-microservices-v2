@@ -7,6 +7,6 @@ data:
   JWT_SECRET: juancho8
   POSTGRES_DB: udagramdelgadodev
   POSTGRES_HOST: udagramdelgadodev.chocxswmc6av.ca-central-1.rds.amazonaws.com
-  URL: http://a1f23792c38b44eb9b907b8f9c7ce0cd-1955061905.ca-central-1.elb.amazonaws.com/
+  URL: http://localhost:8100
 metadata:
   name: env-config
