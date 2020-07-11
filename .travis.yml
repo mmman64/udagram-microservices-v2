@@ -1,10 +1,7 @@
 language: minimal
-
 services: docker
-
 env:
   - DOCKER_COMPOSE_VERSION=1.23.2
-
 before_install:
   - docker -v && docker-compose -v
   - sudo rm /usr/local/bin/docker-compose
@@ -14,12 +11,8 @@ before_install:
   - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
-
 install:
-  - docker-compose -f udacity-deployment/docker/docker-compose-build.yaml build --parallel
-  - docker-compose -f udacity-deployment/docker/docker-compose-build.yaml push
-
+  - docker-compose -f docker-compose-build.yml build --parallel
 after_success:
-  - docker image ls
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker-compose -f udacity-deployment/docker/docker-compose-build.yaml build --parallel
+  - docker-compose -f docker-compose-build.yaml push
