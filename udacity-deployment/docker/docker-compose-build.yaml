@@ -3,16 +3,16 @@ services:
   reverseproxy:
     build:
       context: .
-    image: juadel/reverseproxy-v2
+    image: mmcmandidwhat/reverseproxy
   backend_user:
     build:
       context: ../../udagram-backend-user
-    image: juadel/udagram-user-v2
+    image: mmcmandidwhat/udagram-user
   backend_feed:
     build:
       context: ../../udagram-backend-feed
-    image: juadel/udagran-feed-v2
+    image: mmcmandidwhat/udagran-feed
   frontend:
     build:
-      context: ../../udagram-frontend  
-    image: juadel/udagram-frontend-v2
+      context: ../../udagram-frontend
+    image: mmcmandidwhat/udagram-frontend
